@@ -99,6 +99,9 @@ class Visualizer extends Component {
         deleteSelectedModel: () => {
             this.props.removeSelectedModel();
         },
+        duplicateSelectedModel: () => {
+        	this.props.duplicateSelectedModel();
+        },
         arrangeAllModels: () => {
             this.props.arrangeAllModels2D();
         }
@@ -376,6 +379,12 @@ class Visualizer extends Component {
                                 label: i18n._('Arrange All Models'),
                                 disabled: !hasModel,
                                 onClick: this.actions.arrangeAllModels
+                            },
+                            {
+                            	type: 'item',
+                            	label: i18n_('Duplicate Selected Model'),
+                            	disabled: !isModelSelected,
+                            	onClick: this.actions.duplicateSelectedModel
                             }
                         ]
                     }

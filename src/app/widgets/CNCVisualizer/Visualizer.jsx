@@ -98,6 +98,9 @@ class Visualizer extends Component {
         deleteSelectedModel: () => {
             this.props.removeSelectedModel();
         },
+        duplicateSelectedModel: () => {
+        	this.props.duplicateSelectedModel();
+        },
         arrangeAllModels: () => {
             this.props.arrangeAllModels2D();
         }

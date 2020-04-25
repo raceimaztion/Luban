@@ -89,6 +89,14 @@ class ModelGroup {
         }
         return null;
     }
+    
+    duplicateSelectedModel() {
+    	const selected = this.getSelectedModel();
+    	if (selected) {
+    		this.addModel(selected.clone());
+    	}
+    	return null;
+    }
 
     // model.transformation.positionZ !== model.meshObject3D.position.z
     bringSelectedModelToFront() {
